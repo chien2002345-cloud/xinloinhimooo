@@ -49,22 +49,16 @@ body{
 .container{
 
     position:relative;
-
     z-index:2;
-
     margin-top:25px;
-
     padding:20px;
 }
 
 img{
 
     width:300px;
-
     height:340px;
-
     object-fit:cover;
-
     max-width:90%;
 
     border-radius:22px;
@@ -122,7 +116,7 @@ button{
     0 5px 15px rgba(0,0,0,0.15);
 }
 
-/* Nút đồng ý */
+/* NÚT ĐỒNG Ý */
 
 #yes{
 
@@ -151,9 +145,10 @@ button{
 }
 
 #no{
-
     background:white;
 }
+
+/* TIM + STICKER */
 
 .heart,
 .sticker{
@@ -299,31 +294,27 @@ let stickers = [
 
 ];
 
-let yes =
-document.getElementById("yes");
+let yes = document.getElementById("yes");
 
-let no =
-document.getElementById("no");
+let no = document.getElementById("no");
 
-let text =
-document.getElementById("text");
+let text = document.getElementById("text");
 
-let subText =
-document.getElementById("subText");
+let subText = document.getElementById("subText");
 
-let img =
-document.getElementById("img");
+let img = document.getElementById("img");
 
-let music =
-document.getElementById("music");
+let music = document.getElementById("music");
 
-/* bật nhạc */
+/* PHÁT NHẠC */
 
 document.body.addEventListener(
 
 "click",
 
 ()=>{
+
+    music.volume = 1;
 
     music.play();
 
@@ -333,7 +324,7 @@ document.body.addEventListener(
 
 );
 
-/* tim bay */
+/* TIM BAY */
 
 function createHeart(){
 
@@ -364,7 +355,7 @@ function createHeart(){
 
 setInterval(createHeart,300);
 
-/* sticker bay */
+/* STICKER BAY */
 
 function createSticker(){
 
@@ -407,7 +398,7 @@ subText.innerText = subTexts[0];
 
 no.innerText = noTexts[0];
 
-/* bấm KHÔNG */
+/* BẤM KHÔNG */
 
 no.onclick = ()=>{
 
@@ -474,7 +465,7 @@ no.onclick = ()=>{
 
 };
 
-/* bấm ĐỒNG Ý */
+/* BẤM ĐỒNG Ý */
 
 yes.onclick = ()=>{
 
